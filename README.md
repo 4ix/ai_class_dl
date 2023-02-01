@@ -1,4 +1,16 @@
 # 모두의 딥러닝
+## 2023-02-01(화)
+### 다층 퍼셉트론
+- XOR 문제의 해결
+
+### 오차 역전파 계산
+- [back propagation](https://evan-moon.github.io/2018/07/19/deep-learning-backpropagation/)
+- [기울기 소실 문제(vanishing gradient)](https://heytech.tistory.com/388)
+- 학습: 오차를 최소화하는 가중치를 찾는 과정.
+- 확률적 경사 하강법: 랜덤하게 추출한 일부 데이터만 사용. 빠르고 더 자주 업데이트 할 수 있는 장점.
+- 모멘텀: 오차를 수정하기 전 바로 앞 수정값과 방향을 참고해 같은 방향으로 일정한 비율만 수정되게 하는 방법.
+- 옵티마이저(optimizers): 오차를 최소화하는 경사 하강법.
+
 ## 2023-01-31(화)
 ### Gradient descent(GD, 경사하강법)
 - 반복적으로 기울기 a를 변화시켜서 m 값을 찾아내는 방법
