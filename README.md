@@ -1,5 +1,52 @@
 # 모두의 딥러닝
-## 2023-02-01(화)
+## 2023-02-02(목)
+### K-fold 교차 검증
+[K-fold 교차 검증](https://nonmeyet.tistory.com/entry/KFold-Cross-Validation%EA%B5%90%EC%B0%A8%EA%B2%80%EC%A6%9D-%EC%A0%95%EC%9D%98-%EB%B0%8F-%EC%84%A4%EB%AA%85)
+
+### 딥러닝 모델
+```
+## 1. 모델 생성
+model = keras.Sequential(name='sonar')
+model.add(keras.layers.Dense(24, input_shape=(60, ), activation='relu'))
+model.add(keras.layers.Dense(10, activation='relu'))
+model.add(keras.layers.Dense(1, activation='sigmoid'))
+model.summary()
+
+## 2. 모델 컴파일 (loss, optimizer, metrics)
+model.compile(loss='binary_crossentropy', optimizer='adam', metrics=['accuracy'])
+
+## 3. 모델 학습(fit)
+model.fit(X,y, epochs=100, batch_size=20)
+
+## 4. 모델 평가
+print(f'loss:{model.evaluate(X, y)[0]}, accuracy:{model.evaluate(X, y)[1]}')
+
+## 5. 모델 저장
+model.save('sonar_model.hdf5')
+
+## 6. 모델 로딩
+model_imported = keras.models.load_model('./sonar_model.hdf5')
+
+## 7. 로딩한 모델 사용방법
+model_imported.evaluate(X_test, y_test)
+```
+### 모델 성능 검증
+- 딥러닝의 경우 샘플 수가 많을수록 성능이 좋아짐
+- 데이터에 따라서는 딥러닝이 아닌 랜덤 포레스트, XGBoost, SVM 등 다른 알고리즘이 더 좋은 성과를 보일 때도 있음(머신러닝)
+
+### 모델 성능 향상
+- 학습의 자동 중단
+```
+modelpath = './model/best_model.hdf5'
+
+checkpoint = keras.callbacks.ModelCheckpoint(filepath=modelpath, monitor='val_loss', save_best_only=True, verbose=1)
+
+earlystop = keras.callbacks.EarlyStopping(monitor='val_loss', patience=10) # 10정도 좋아지지 않으면 stop
+
+history = model.fit(X,y,validation_split=0.3, epochs=2000, batch_size=500, callbacks=[checkpoint, earlystop])
+```
+
+## 2023-02-01(수)
 ### 다층 퍼셉트론
 - XOR 문제의 해결
 
