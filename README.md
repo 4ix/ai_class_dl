@@ -1,4 +1,17 @@
 # 모두의 딥러닝
+## 2023-02-03(금)
+### 컨볼루션 신경망(CNN)
+- [DNN CNN 개념 차이](https://ebbnflow.tistory.com/119)
+- stride = 1, 1칸씩 움직인다는 뜻
+- padding: 0(zero padding)을 cnn 시 연산에 넣는다 (padding=same) -> 이미지가 계속 줄어드는 것을 방지
+- max pooling: cnn output의 max 값을 넘긴다
+- input -> convolution -> max-pooling -> convolution -> max-pooling ..... -> flatten
+- [drop out](https://hyewonleess.github.io/cnn/CNN_options/)
+
+### 적대적 신경망(GAN)
+- [적대적 신경망](https://www.spri.kr/posts/view/21883?code=industry_trend)
+- [배치정규화](https://gaussian37.github.io/dl-concept-batchnorm/)
+
 ## 2023-02-02(목)
 ### K-fold 교차 검증
 [K-fold 교차 검증](https://nonmeyet.tistory.com/entry/KFold-Cross-Validation%EA%B5%90%EC%B0%A8%EA%B2%80%EC%A6%9D-%EC%A0%95%EC%9D%98-%EB%B0%8F-%EC%84%A4%EB%AA%85)
