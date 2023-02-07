@@ -1,4 +1,12 @@
 # 모두의 딥러닝
+## 2023-02-07(화)
+### 전이 학습
+- [VGG16](https://medium.com/@msmapark2/vgg16-%EB%85%BC%EB%AC%B8-%EB%A6%AC%EB%B7%B0-very-deep-convolutional-networks-for-large-scale-image-recognition-6f748235242a)
+
+### 설명 가능한 딥러닝 모델 만들기
+- 그래디언트 CAM
+- 오클루전
+
 ## 2023-02-03(금)
 ### 컨볼루션 신경망(CNN)
 - [DNN CNN 개념 차이](https://ebbnflow.tistory.com/119)
